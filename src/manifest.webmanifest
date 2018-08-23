@@ -1,0 +1,63 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "name": "Codetools",
+  "description": "Some tools to help with code related tasks at work.",
+  "short_name": "Codetools",
+  "icons": [{
+    "src": "icon/ct-16.png",
+    "sizes": "16x16",
+    "type": "image/png"
+  },{
+    "src": "icon/ct-24.png",
+    "sizes": "24x24",
+    "type": "image/png"
+  },{
+    "src": "icon/ct-32.png",
+    "sizes": "32x32",
+    "type": "image/png"
+  },{
+    "src": "icon/ct-48.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  },{
+    "src": "icon/ct-57.png",
+    "sizes": "57x57",
+    "type": "image/png"
+  },{
+    "src": "icon/ct-64.png",
+    "sizes": "64x64",
+    "type": "image/png"
+  },{
+    "src": "icon/ct-72.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  },{
+    "src": "icon/ct-114.png",
+    "sizes": "114x114",
+    "type": "image/png"
+  },{
+    "src": "icon/ct-120.png",
+    "sizes": "120x120",
+    "type": "image/png"
+  },{
+    "src": "icon/ct-144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  },{
+    "src": "icon/ct-152.png",
+    "sizes": "152x152",
+    "type": "image/png"
+  }],
+  "scope": "/#!/",
+  "start_url": "/#!/",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "theme_color": "aliceblue",
+  "background_color": "red",
+  "screenshots": [{
+    "src": "screenshots/codetools.png",
+    "sizes": "1680x895",
+    "type": "image/png"
+  }]
+}

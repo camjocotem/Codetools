@@ -1,0 +1,34 @@
+<div layout="column">
+    <div layout="row" layout-align="space-around start">
+        <div flex="50" layout="row" layout-align="space-around center">
+            <h3>List A</h3>
+            <textarea ng-model="vm.listA" ng-change="vm.compareLists(vm.listA, vm.listB)" flex="90"></textarea>
+        </div>
+        <div flex="50" layout="row" layout-align="space-around stretch">
+            <h3>List B</h3>
+            <textarea ng-model="vm.listB" ng-change="vm.compareLists(vm.listA, vm.listB)" flex="90"></textarea>
+        </div>
+    </div>
+    <div layout="row" layout-align="space-around start">
+        <div ng-if="vm.commonEntries.length">
+            <h3>Common entries</h3>
+            <ul>
+                <li ng-repeat="item in vm.commonEntries track by $index">{{item}}</li>
+            </ul>
+        </div>
+
+        <div ng-if="vm.itemsUniqueToA.length">
+            <h3>Items only in list A</h3>
+            <ul>
+                <li ng-repeat="item in vm.itemsUniqueToA track by $index">{{item}}</li>
+            </ul>
+        </div>
+
+        <div ng-if="vm.itemsUniqueToB.length">
+            <h3>Items only in list B</h3>
+            <ul>
+                <li ng-repeat="item in vm.itemsUniqueToB track by $index">{{item}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

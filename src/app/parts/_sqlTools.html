@@ -1,0 +1,39 @@
+<div layout="column" id="sqlTools">
+    <h2>SQL 'IN' parameter generator</h2>
+    <p>Input a line separated list and converts line-by-line to comma-separated quoted parameters.</p>
+    <div layout="row" layout-align="space-around" flex="33">
+        <div layout="column" flex="45" layout-align="space-around">
+           <textarea ng-model="sq.commaList" cols="30" rows="10" flex ng-change="sq.convertCommaSepList(sq.commaList)"></textarea>
+           <div layout="row" flex="10" style="margin: 0.7rem;">
+               <input type="checkbox" name="ignoreWhiteLines" ng-model="sq.ignoreWhiteLines" ng-change="sq.convertCommaSepList(sq.commaList)">
+               <label for="ignoreWhiteLines">Ignore white lines</label>
+               <input type="checkbox" name="ignoreDuplicates" ng-model="sq.ignoreDuplicates" ng-change="sq.convertCommaSepList(sq.commaList)">
+               <label for="ignoreDuplicates">Ignore duplicates</label>
+           </div>
+        </div>
+        <textarea ng-model="sq.commaListOutput" disabled flex="45"></textarea>
+    </div>
+
+    <h2>SQL 'INSERT' parameter generator</h2>
+    <p>Input a CSV file and convert it to become values for an SQL INSERT command.</p>
+    <div layout="row" layout-align="space-around">
+        <div layout="column" flex="45" layout-align="space-around">
+            <textarea ng-model="sq.csvText" cols="30" rows="10" flex="50" ng-change="sq.convertCSVFile(sq.csvText)"></textarea>
+            <div layout="row">
+                <input type="checkbox" name="fileHeaders" ng-model="sq.fileHasHeaders" ng-change="sq.convertCSVFile(sq.csvText)">
+                <label for="fileHeaders">File has headers</label>
+            </div>
+            <fieldset>
+                <legend>Treat as strings</legend>                
+                <input type="checkbox" name="treatNumbersAsStrings" ng-model="sq.treatNumbersAsStrings" style="margin-left: 1rem;" ng-change="sq.convertCSVFile(sq.csvText)">
+                <label for="treatNumbersAsStrings">Numbers</label>
+                <input type="checkbox" name="treatSQLMethodsAsStrings" ng-model="sq.treatSQLMethodsAsStrings" ng-change="sq.convertCSVFile(sq.csvText)">
+                <label for="treatSQLMethodsAsStrings">Methods</label>
+                <input type="checkbox" name="treatNullsAsStrings" ng-model="sq.treatNullsAsStrings" ng-change="sq.convertCSVFile(sq.csvText)">
+                <label for="treatNullsAsStrings">NULLs</label>
+            </fieldset>
+            <input type="file" name="csvFile" file-reader="sq.csvFile" ng-if="sq.csvFile" accept=".csv">
+        </div>
+        <textarea ng-model="sq.csvFileOutput" disabled flex="45"></textarea>
+    </div>
+</div>

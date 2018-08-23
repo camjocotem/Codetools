@@ -1,0 +1,30 @@
+@import './ie.scss';
+
+header{
+    background: black;
+    color: white;
+
+    nav{
+        ct-nav-item{
+            padding: .5rem;
+            width: 5rem;
+            text-align: center;
+            height: 2rem;
+
+            a.active{
+                color: white;
+                text-decoration: none;
+                border-bottom: 1px solid white;
+            }
+        }
+    }
+
+    h1{
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
+}
+
+main{
+    margin: 2rem;
+}

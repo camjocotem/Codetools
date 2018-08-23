@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Codetools</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Some tools to help with code related tasks at work.">
+    <meta name="og:description" content="Some tools to help with code related tasks at work.">
+    <meta name="og:title" content="Codetools">
+    <meta name="application-name" content="Codetools">
+    <meta name="google-site-verification" content="cHU-XHf29w9f4bCS8DizV3rQi2jutbfPjFZ7VtS-Ywo" />
+
+    <link rel="icon" href="icon/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="icon/ct-16.png">
+    <link rel="icon" sizes="24x24" href="icon/ct-24.png">
+    <link rel="icon" sizes="32x32" href="icon/ct-32.png">
+    <link rel="icon" sizes="48x48" href="icon/ct-48.png">
+    <link rel="icon" sizes="57x57" href="icon/ct-57.png">
+    <link rel="icon" sizes="64x64" href="icon/ct-64.png">
+    <link rel="icon" sizes="72x72" href="icon/ct-72.png">
+    <link rel="icon" sizes="114x114" href="icon/ct-114.png">
+    <link rel="icon" sizes="120x120" href="icon/ct-120.png">
+    <link rel="icon" sizes="144x144" href="icon/ct-144.png">
+    <link rel="icon" sizes="152x152" href="icon/ct-152.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="css/angular-material.css">   
+    <link rel="stylesheet" href="css/main.css">   
+    <script src="lib/dependency.js"></script>    
+    <script src="lib/app.js"></script>
+    <script src="lib/app.states.js"></script>
+    <script src="lib/toolsApp_140420181257.js"></script>
+    <script type="application/javascript">
+        //        https://css-tricks.com/ie-10-specific-styles/
+        var doc = document.documentElement;
+        doc.setAttribute('data-useragent', navigator.userAgent);
+    </script>    
+
+</head>
+
+<body ng-app="app" ng-cloak ng-controller="MainController">
+    <header layout="row" layout-align="start center" hide-xs>
+        <h1 class="title">Codetools</h1>
+        <nav layout="row" layout-align="space-around center" flex-sm="20" flex-gt-sm="10" >
+            <ct-nav-item state="sql">SQL</ct-nav-item>
+            <ct-nav-item state="lists">Lists</ct-nav-item>
+        </nav>
+    </header>
+    <main layout="column" ui-view="primary">
+        <!-- I am aware the content here will be replaced by ui-router but it's here for the purposes of SEO -->
+        <h2>SQL 'IN' parameter generator</h2>
+        <p>Input a line separated list and converts line-by-line to comma-separated quoted parameters.</p>
+        
+        <h2>SQL 'INSERT' parameter generator</h2>
+        <p>Input a CSV file and convert it to become values for an SQL INSERT command.</p>
+    </main>
+        <script src="https://cdn.polyfill.io/v2/polyfill.min.js" async></script>
+</body>
+
+</html>

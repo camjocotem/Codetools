@@ -1,0 +1,10 @@
+html[data-useragent*='Trident/7.0']{
+    #sqlTools{
+        .layout-row{
+            min-height: 14rem;
+            .layout-row{
+                min-height: auto;
+            }
+        }
+    }
+}
